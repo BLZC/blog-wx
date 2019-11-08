@@ -1,0 +1,53 @@
+{
+  "pages": [
+    "pages/index/index",
+    "pages/about/about",
+    "pages/detail/detail",
+    "pages/list/list",
+    "pages/search/search"
+  ],
+  "window": {
+    "navigationBarBackgroundColor": "#007fff",
+    "navigationStyle": "custom",
+    "navigationBarTitleText": "IT之家",
+    "navigationBarTextStyle": "white"
+  },
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-row": "vant-weapp/row",
+    "van-col": "vant-weapp/col",
+    "van-card": "vant-weapp/card",
+    "van-icon": "vant-weapp/icon",
+    "van-action-sheet": "vant-weapp/action-sheet",
+    "van-loading": "vant-weapp/loading",
+    "van-nav-bar": "vant-weapp/nav-bar",
+    "van-search": "vant-weapp/search",
+    "wemark": "./wemark/wemark"
+  },
+  "tabBar": {
+    "color": "#a9b7b7",
+    "selectedColor": "#11cd6e",
+    "borderStyle": "white",
+    "list": [
+      {
+        "selectedIconPath": "images/index.png",
+        "iconPath": "images/index.png",
+        "pagePath": "pages/index/index",
+        "text": "首页"
+      },
+      {
+        "selectedIconPath": "images/list.png",
+        "iconPath": "images/list.png",
+        "pagePath": "pages/list/list",
+        "text": "社区"
+      },
+      {
+        "selectedIconPath": "images/about.png",
+        "iconPath": "images/about.png",
+        "pagePath": "pages/about/about",
+        "text": "我的"
+      }
+    ]
+  },
+  "sitemapLocation": "sitemap.json"
+}

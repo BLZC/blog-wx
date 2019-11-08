@@ -1,0 +1,35 @@
+<scroll-view>
+    <van-nav-bar
+    title="文章详情"
+    left-text="返回"
+    left-arrow
+    bind:click-left="linkBack"
+    custom-class="nav-bar"
+    />
+    <view class="detail-header">
+        <van-row>
+            <van-col span="3">
+            <view>
+                <image class="detail-header-img" src="../../images/tx.png" alt="头像" />
+            </view>
+            </van-col>
+            <van-col span="21">
+            <view class="detail-header-author">
+                <view class="article-header-author-top">
+                    {{detail.author}}
+                </view>
+                <view class="detail-header-author-bottom">
+                    {{detail.time}}
+                </view>
+            </view>
+            </van-col>
+        </van-row>
+    </view>
+    <view class="detail-content">
+        <text class="detail-content-title">{{detail.title}}</text>
+        <view class="detail-content-text">
+            <wemark md="{{detail.content}}" highlight type="wemark"></wemark>
+        </view>
+      
+    </view>
+</scroll-view>

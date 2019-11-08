@@ -1,0 +1,12 @@
+<view>
+<van-nav-bar
+  title="内容搜索"
+  left-text="返回"
+  left-arrow
+  bind:click-left="linkBack"
+  custom-class="nav-bar"
+/>
+    <!--search-->
+    <van-search value="{{ value }}" background="#007fff" placeholder="请输入搜索关键词" bind:tap="toSearch">
+    </van-search>
+</view>

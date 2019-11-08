@@ -1,0 +1,14 @@
+.my-notice-bar {
+  margin: 20rpx 0;
+}
+
+.article {
+  background: #fafafa;
+  padding: 20rpx 0;
+}
+
+.nav-bar {
+  color: #fff;
+}
+
+

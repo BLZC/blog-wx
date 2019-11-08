@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "van-tree-select": "vant-weapp/tree-select",
+    "van-grid": "vant-weapp/grid",
+    "van-grid-item": "vant-weapp/grid-item",
+    "van-divider": "vant-weapp/divider"
+  }
+}

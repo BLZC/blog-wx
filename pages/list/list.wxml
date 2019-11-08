@@ -1,0 +1,43 @@
+<scroll-view class="list">
+    <!--nav-bar-->
+    <van-nav-bar title="社区活动" custom-class="nav-bar">
+    </van-nav-bar>
+    <!--顶部轮播图-->
+    <swiper indicator-dots="{{indicatorDots}}"
+        autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+        <block wx:for="{{swiperLists}}" wx:key="item.id" wx:item="item">
+            <swiper-item>
+            <view class="swiper-item">
+                <image class="swiper-item-img" src="{{item.url}}" />
+            </view>
+            </swiper-item>
+        </block>
+    </swiper>
+
+    <!--nav-->
+    <van-grid column-num="5">
+        <van-grid-item wx:for="{{navLists}}"  wx:key="item.id" wx:item="item" icon="{{item.icon}}" text="{{item.name}}" />
+    </van-grid>
+
+    <!--灰色间隙-->
+    <view class="hd"></view>
+
+    <!--内容主体区域-->
+    <view class="list-content">
+        <view class="list-content-header">
+            <van-icon name="http://pzpxyio9x.bkt.clouddn.com/hot.png" />
+            热门文章
+        </view>
+        <view class="list-content-main" wx:for="{{articleLists}}" wx:key="item.id" wx:item="item"> 
+            <van-divider />
+            <view class="list-content-main-title">
+                {{item.title}}
+            </view>
+            <view class="list-content-main-other">
+                45人赞 · {{item.author}} · {{item.time}}
+            </view>
+        </view>
+    </view>
+      
+<!-- <van-tree-select main-item-class="lclass" items="{{ items }}" main-active-index="{{ mainActiveIndex }}" active-id="{{ activeId }}" bind:click-nav="onClickNav" /> -->
+</scroll-view>

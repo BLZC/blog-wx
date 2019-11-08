@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+    "article-item": "../../components/article-item/index",
+    "van-field": "vant-weapp/field",
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "van-tab": "vant-weapp/tab",
+    "van-tabs": "vant-weapp/tabs"
+  }
+}

@@ -1,0 +1,42 @@
+/* .lclass {
+  height:100%;
+} */
+
+.swiper-item-img {
+  width: 100%;
+  height: 300rpx;
+}
+
+.nav-bar {
+  color: #fff;
+}
+
+.hd {
+  width: 100%;
+  height: 20rpx;
+  background: #fafafa;
+}
+
+.list-content {
+  padding: 0 20rpx;
+}
+
+.list-content-header {
+  height: 46rpx;
+  line-height: 80rpx;
+}
+
+.list-content-main {
+  height: 160rpx;
+}
+
+.list-content-main-title {
+  /* font-size: rpx; */
+}
+
+
+.list-content-main-other {
+  font-size: 24rpx;
+  color: #666;
+  margin-top: 8rpx;
+}

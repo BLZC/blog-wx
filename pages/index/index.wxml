@@ -1,0 +1,29 @@
+<scroll-view>
+    <van-nav-bar
+    title="IT之家"
+    custom-class="nav-bar"
+    />
+    <!--首页search-->
+    <van-search value="{{ value }}" background="#007fff" placeholder="请输入搜索关键词" bind:tap="toSearch">
+    </van-search>
+    <!--首页nav-->
+    <van-tabs active="{{ active }}" bind:change="onChange" sticky>
+        <van-tab wx:for="{{navList}}" wx:key="item.id" wx:for-item="item" title="{{item.name}}">
+        </van-tab>
+    </van-tabs>
+    <!--首页notice-->
+    <view class="my-notice-bar">
+        <van-notice-bar left-icon="volume" text="欢迎来到IT之家!"/>
+    </view>
+    <!--首页文章列表-->
+        <!--使用封装的文章展示组件-->
+        <view class="article">
+            <view wx:for="{{articles}}" wx:item="item" wx:key="item.id">
+                <article-item data="{{item}}"></article-item>
+            </view>
+        </view>
+        <!-- <view>
+            <van-card title-class="card_title" price-class="card_price" desc-class="card_desc" wx:for="{{ypList}}" wx:for-item="item" wx:key="item.id" num="{{item.number}}" price="{{item.price}}" desc="{{item.description}}" title="{{item.title}}" thumb="{{item.imgUrl}}" thumb-mode="scaleToFill" lazy-load="true" linkUrl="{{item.linkUrl}}" />
+        </view> -->
+        <!-- <view class="bottomText">{{bottomText}}</view> -->
+</scroll-view>

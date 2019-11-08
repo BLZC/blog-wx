@@ -1,0 +1,79 @@
+<view class="article-item">
+    <navigator url="/pages/detail/detail?id={{data.id}}" hover-class="navigator-hover">
+        <view class="article-header">
+            <van-row>
+                <van-col span="3">
+                <view>
+                    <image class="article-header-img" src="../../images/tx.png" alt="头像" />
+                </view>
+                </van-col>
+                <van-col span="18">
+                <view class="article-header-author">
+                    <view class="article-header-author-top">
+                        {{data.author}}
+                    </view>
+                    <view class="article-header-author-bottom">
+                        {{data.time}}
+                    </view>
+                </view>
+                </van-col>
+                <van-col span="3">
+                    <view class="article-header-right" catch:tap="Share">
+                        ...
+                    </view>
+                </van-col>
+            </van-row>
+        </view>
+        <view>
+            <van-row>
+                <van-col span="2" offset="1">
+                    <span class="article-title-left">专栏</span>
+                </van-col>
+                <van-col span="20" offset="1">
+                    <view class="article-title-right">
+                        <text>{{data.title}}</text>
+                    </view>
+                </van-col>
+            </van-row>
+        </view>
+        <view>
+            <van-row>
+                <van-col span="18">
+                    <view class="article-content-text">
+                        {{data.content}}
+                        <!--markdown解析-->
+                        <!-- <wemark md="{{data.content}}" link highlight type="wemark"></wemark> -->
+                    </view>
+                </van-col>
+                <van-col span="6">
+                    <image class="article-content-img" src="../../images/tx.png" alt="图片" />
+                </van-col>
+            </van-row>
+        </view>
+        <view class="article-footer">
+            <van-row>
+                <van-col span="8">
+                    <van-icon name="http://pzpxyio9x.bkt.clouddn.com/dz.png"/>
+                    139
+                </van-col>
+                <van-col span="8">
+                    <van-icon name="http://pzpxyio9x.bkt.clouddn.com/pl.png"/>
+                    19
+                </van-col>
+                <van-col span="8">
+                    <view catch:tap="Share">
+                        <van-icon name="http://pzpxyio9x.bkt.clouddn.com/fx.png"/>
+                        分享
+                    </view>
+                </van-col>
+            </van-row>
+        </view>
+    </navigator>
+    <van-action-sheet
+        show="{{ show }}"
+        actions="{{ actions }}"
+        bind:close="onClose"
+        bind:select="onSelect"
+    />
+</view>
+  
