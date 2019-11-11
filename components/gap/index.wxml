@@ -1,0 +1,3 @@
+<!-- gap 间隙 -->
+<view class="gap" style="width: {{width}}; height: {{height}}; background: {{bgColor}};">
+</view>

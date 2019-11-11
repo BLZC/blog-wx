@@ -30,6 +30,32 @@
         <view class="detail-content-text">
             <wemark md="{{detail.content}}" highlight type="wemark"></wemark>
         </view>
+    </view>
+    <gap></gap>
+    <view class="commentArea">
+        评论
+        <view class="commentInput">
+            <van-field
+            value="{{ searchMessage }}"
+            type="textarea"
+            input-class="inputClass"
+            placeholder="请输入留言"
+            autosize
+            custom-style="margin-bottom: 20rpx;"
+            bind:focus="showComment"
+            border="{{true}}"
+            />
+            <van-button wx:if="{{buttomShow}}" type="info" size="small">评论</van-button>
+        </view>
+    </view>
       
+    <view wx:if="{{comment}}" class="comment">
+        
+    </view>
+    <view wx:else class="comment nocomment">
+        <van-icon size="60rpx" name="comment" />
+        <view>
+            暂无评论
+        </view>
     </view>
 </scroll-view>

@@ -29,13 +29,15 @@
             热门文章
         </view>
         <view class="list-content-main" wx:for="{{articleLists}}" wx:key="item.id" wx:item="item"> 
-            <van-divider />
-            <view class="list-content-main-title">
-                {{item.title}}
-            </view>
-            <view class="list-content-main-other">
-                45人赞 · {{item.author}} · {{item.time}}
-            </view>
+            <navigator url="/pages/detail/detail?fromPath=/pages/list/list&id={{data.id}}" hover-class="none">
+                <van-divider />
+                <view class="list-content-main-title">
+                    {{item.title}}
+                </view>
+                <view class="list-content-main-other">
+                    45人赞 · {{item.author}} · {{item.time}}
+                </view>
+            </navigator>
         </view>
     </view>
       

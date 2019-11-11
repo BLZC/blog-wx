@@ -27,7 +27,7 @@
 }
 
 .list-content-main {
-  height: 160rpx;
+  height: 140rpx;
 }
 
 .list-content-main-title {

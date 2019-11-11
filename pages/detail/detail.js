@@ -1,19 +1,27 @@
 import WXAPI from '../../wxapi/classification'
 Page({
   data: {
-    detail: {}
+    fromPath: '',
+    detail: {},
+    searchMessage: '',
+    comment: '',
+    buttomShow: false
   },
   onLoad(options) {
     this.getArticleDetail(options.id)
+    this.setData({fromPath: options.fromPath})
   },
   getArticleDetail (id) {
     WXAPI.getArticleDetail({ id: id }).then(res => {
       this.setData({detail: res.result})
     })
   },
-  linkBack() {
+  linkBack () {
     wx.switchTab({
-        url: '/pages/index/index'
+        url: this.data.fromPath
       })        
-}
+  },
+  showComment () {
+    this.setData({buttomShow: true})
+  }
 })

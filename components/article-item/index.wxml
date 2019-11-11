@@ -1,5 +1,5 @@
 <view class="article-item">
-    <navigator url="/pages/detail/detail?id={{data.id}}" hover-class="navigator-hover">
+    <navigator url="/pages/detail/detail?fromPath=/pages/index/index&id={{data.id}}" hover-class="navigator-hover">
         <view class="article-header">
             <van-row>
                 <van-col span="3">
@@ -53,16 +53,16 @@
         <view class="article-footer">
             <van-row>
                 <van-col span="8">
-                    <van-icon name="http://pzpxyio9x.bkt.clouddn.com/dz.png"/>
-                    139
+                    <van-icon catch:tap="Like" size="40rpx" color="{{activeColor}}" name="good-job"/>
+                    {{likesNumber}}
                 </van-col>
                 <van-col span="8">
-                    <van-icon name="http://pzpxyio9x.bkt.clouddn.com/pl.png"/>
+                    <van-icon size="40rpx" name="comment"/>
                     19
                 </van-col>
                 <van-col span="8">
                     <view catch:tap="Share">
-                        <van-icon name="http://pzpxyio9x.bkt.clouddn.com/fx.png"/>
+                        <van-icon size="40rpx" name="share"/>
                         分享
                     </view>
                 </van-col>

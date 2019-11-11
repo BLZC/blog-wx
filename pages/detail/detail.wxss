@@ -23,10 +23,6 @@
   text-align: left;
 }
 
-.detail-header-author-top {
-  
-}
-
 .detail-header-author-bottom {
   font-size: 24rpx;
   color: #ddd;
@@ -43,4 +39,26 @@
 
 .detail-content-text {
   line-height: 36rpx;
+}
+
+.comment {
+  text-align: center;
+}
+
+.nocomment {
+  padding: 40rpx;
+  color: #ddd;
+}
+
+.commentArea {
+  text-align: center;
+  color: #999;
+  padding: 20rpx 10% 0;
+}
+
+.commentInput {
+  text-align:right;
+  margin-top: 20rpx;
+  padding: 20rpx 5% 20rpx 5%;
+  background: #fafafa;
 }
